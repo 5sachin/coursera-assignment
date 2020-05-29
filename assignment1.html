@@ -1,11 +1,37 @@
-<<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!doctype html>
+<html lang="en" ng-app='myFirstAssig'>
   <head>
-    <meta charset="utf-8">
-    <title>ASSIGNMENT 1</title>
+    <title>Lunch Checker</title>
+    
+    <script  src="angular.min.js"></script>
+    <script  src="app.js"></script>
+    
   </head>
-  <body>
-    <h1>THIS IS MY FIRST ASSIGBMENT</h1>
+<body>
+   <div class="container" ng-controller='MsgController'>
+     <h1>Lunch Checker</h1>
 
-  </body>
+
+         <div class="form-group TextField">
+             <input id="lunch-menu" type="text"
+             placeholder="list comma separated dishes you usually have for lunch"ut
+             class="form-control" ng-model="input" style="border-color: {{borderColor}}" >
+            
+    
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[We do Not consider an Empty item, i.e (  , ,  )]
+             
+
+         </div>
+         <div class="form-group">
+             <button class="btn btn-default" ng-click="checkLunch()">Check If Too Much</button>
+         </div><br>
+         <div class="form-group message">
+           {{result}}
+           <style>
+      .message { font-size: 1.3em; font-weight: bold; color: {{colorResult}}; }
+    </style>
+         </div>
+   </div>
+
+</body>
 </html>
