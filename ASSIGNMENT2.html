@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <script src="angular.min.js"></script>
     <script src="ASSIGNMENT2.js"></script>
+    <link rel="stylesheet" href="style2.css">
     <style> body { font-size: 1.3em; }</style>
     <title>CHECK OFF LIST</title>
   </head>
@@ -14,7 +15,7 @@
      <ol>
         <li ng-repeat="item in tobuy.items">
           BUY {{ item.quantity }} OF {{ item.name }}
-          <button ng-click="tobuy.removeItem($index);">BOUGHT</button>
+          <button ng-click="tobuy.removeItem($index);" class="btnBought">BOUGHT</button>
         </li>
       </ol>
       <div ng-if="tobuy.errorMessage" class="error">{{tobuy.errorMessage}}</div>
@@ -27,7 +28,7 @@
           BOUGHT {{ item.quantity }} OF {{ item.name }}
         </li>
       </ol>
-      <div ng-show="!bought.errorMessage">EMPTY LIST</div>
+      <div ng-if="bought.items.length ==0" class="error">NOTHING BOUGHT YET</div>
 
     </div>
   </body>
