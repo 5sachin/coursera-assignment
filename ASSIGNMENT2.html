@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app='ShoppingListApp'>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="ASSIGNMENT2.js"></script>
+    <style> body { font-size: 1.3em; }</style>
+    <title>CHECK OFF LIST</title>
+  </head>
+  <body>
+    <h3>CHECK OFF LIST</h3>
+    <div ng-controller='ShoppingListAddController as tobuy'>
+      <h5>TO BUY</h5>
+     <ol>
+        <li ng-repeat="item in tobuy.items">
+          BUY {{ item.quantity }} OF {{ item.name }}
+          <button ng-click="tobuy.removeItem($index);">BOUGHT</button>
+        </li>
+      </ol>
+      <div ng-if="tobuy.errorMessage" class="error">{{tobuy.errorMessage}}</div>
+    </div>
+
+    <div ng-controller='ShoppingListShowController as bought'>
+      <h5>ALREADY BOUGHT</h5>
+      <ol>
+        <li ng-repeat="item in bought.items">
+          BOUGHT {{ item.quantity }} OF {{ item.name }}
+        </li>
+      </ol>
+      <div ng-show="!bought.errorMessage">EMPTY LIST</div>
+
+    </div>
+  </body>
+</html>
