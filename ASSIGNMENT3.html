@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app='NarrowItDownApp'>
+<head>
+  <script src="angular.min.js"></script>
+  <script src="ASSIGNMENT3.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>NARROW IT DOWN APP</title>
+</head>
+<body>
+  <div ng-controller='NarrowItDownController as menu'>
+    <input type="text" ng-model="menu.name" placeholder="SEARCH ITEMS" class="TextBox">
+    <button ng-click='menu.find(menu.name)' class="Button">NARROW IT DOWN FOR ME</button>
+    <br><br>
+    <div ng-if="menu.lost ==1" class="Error">NOTHING FOUND</div>
+    <ul>
+      <li ng-repeat='category in menu.founds'>
+        <b>Name: </b>{{category.name}} , &nbsp;&nbsp;&nbsp;&nbsp;<b>SHORT NAME: </b>{{category.short_name}}
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button ng-click="menu.RemoveItem($index);" class="RemoveButton">DONT WANT THIS ONE!</button><br>
+        <b>DESCRIPTION: </b>{{category.description}}
+        
+      </li>
+    </ul>
+      
+    
+  </div>
+
+</body>
+</html>
