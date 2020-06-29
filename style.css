@@ -1,27 +1,15 @@
-.Button{
-	display: inline-block;
-	padding: 5px 32px;
-	
-}
-.Button:hover{
-	display: inline-block;
-	background-color: #b3e6ff;
-	transition: 0.3s;
+body {
+  font-size: 1.2em;
 }
 
-.TextBox{
-	text-shadow: transparent;
-	text-decoration-color: currentColor;
-	padding: 5px 32px;
+.error {
+  color: red;
+  font-weight: bold;
+  display: none;
 }
 
-.RemoveButton{
-	background-color:#e6f7ff;
-}
-.RemoveButton:hover{
-	background-color: #b3e6ff;
-}
-.Error{
-	color: Red;
-	font-size: 2.2em;
+.loading-icon {
+  position: absolute;
+  left: calc(100% / 2);
+  top: 10px;
 }

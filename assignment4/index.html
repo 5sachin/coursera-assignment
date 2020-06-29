@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MenuApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Restaurant Menu App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="css/styles.css"></script>
+    
+
+    
+</head>
+
+<body>
+            
+        <h1>Restaurant Menu App</h1>
+        <button ui-serf="home">HOME</button>
+        <button ui-sref="categories" class="button">CATEGORIES</button>
+        <ui-view></ui-view>
+    
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.js"></script>
+    <script src="modules/menuapp.module.js"> </script>
+    <script src="modules/data.module.js"> </script>
+    <script src="controller/categories.controller.js"> </script>
+    <script src="controller/items.controller.js"> </script>
+    <script src="services/menudata.service.js"> </script>
+    <script src="components/categories.component.js"> </script>
+    <script src="components/items.component.js"> </script>
+    <script src="routes/routes.js"> </script>
+    <script src="templates/home.template.html"> </script>
+    <script src="templates/categories.component.html"> </script>
+    <script src="templates/categories.template.html"> </script>
+    <script src="templates/items.component.html"> </script>
+    <script src="templates/items.template.html"> </script>
+
+</body>
+
+</html>

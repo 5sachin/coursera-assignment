@@ -1,8 +1,9 @@
-<h3>Title: {{ list.myTitle }}</h3>
+  
+<h3>Title: {{ $ctrl.myTitle }}</h3>
 <ol>
-  <li ng-repeat="item in list.items">
+  <li ng-repeat="item in $ctrl.items">
     {{ item.quantity }} of {{ item.name }}
-    <button ng-click="list.onRemove({index: $index});">Remove Item</button>
+    <button ng-click="$ctrl.remove($index);">Remove Item</button>
   </li>
 </ol>
-<div class="error">OH THE HORROR! COOKIES DETECTED!</div>
+<div class="error">WARNING! WARNING! COOKIES DETECTED!</div>
