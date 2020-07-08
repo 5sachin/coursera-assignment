@@ -1,0 +1,19 @@
+<div>
+	<h1>SIGN UP</h1>
+	<fieldset>
+		<form  name="formSignup" novalidate>
+			<label>First Name</label><br>
+			<input type="text" name="firstName" ng-model="signupCtrl.user.firstName" placeholder="FIRST NAME" required><br>
+			<label>Last Name</label><br>
+			<input type="text" name="lastName" ng-model="signupCtrl.user.lastName" placeholder="Last NAME" required><br>
+			<label>EMAIL</label><br>
+			<input type="email" name="email" ng-model="signupCtrl.user.email" placeholder="EMAIL ADDRESS" required><br>
+			<label>PHONE NUMBER</label><br>
+			<input type="text" name="phone" ng-model="signupCtrl.user.phone" placeholder="PH.NO ###-###-####" required pattern="(\d{3})-(\d{3})-(\d{4})"><br>
+			<label>FAVORITE DISH NO</label><br>
+			<input type="text" name="favoriteDish" ng-model="signupCtrl.user.favoriteDish" placeholder="FAVORITE DISH NO" required>
+			<span ng-show="signupCtrl.showError">DIDNT FOUND</span><br>
+			<button ng-disabled="formSignup.$invalid" ng-click="signupCtrl.signup(formSignup)">REGISTER</button><span ng-show="signupCtrl.showMessage">SUCESSFUL</span>
+		</form>
+	</fieldset>
+</div>
