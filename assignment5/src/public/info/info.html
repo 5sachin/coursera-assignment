@@ -1,4 +1,4 @@
-<div>
+<div ng-show="infoCtrl.signedUp">
 <span>FIRST NAME: {{infoCtrl.user.firstName}} </span><br>
 <span>LAST NAME: {{infoCtrl.user.lastName}} </span><br>
 <span>EMAIL-ID:{{infoCtrl.user.email}}</span><br>
@@ -7,6 +7,8 @@
 <menu-item menu-item="infoCtrl.user.favoriteDishDetails" ></menu-item>
 </div>
 
-<!-- <span ng-hide="infoCtrl.signedup">
+
+
+<span ng-hide="infoCtrl.signedUp">
 	<p>NO SIGNED UP <a ui-sref="public.signup" href="#/signup">SIGN UP HERE</a></p>
-</span> -->
+</span>
